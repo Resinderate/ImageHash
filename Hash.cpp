@@ -27,9 +27,9 @@ int main()
 	std::cout << "---------------------" << std::endl;
 	
 
-	hash = Hash("julia.bmp");
+	hash = Hash("Assets/julia.bmp");
 	std::cout << "julia.bmp Hash \t: " << hash << std::endl;
-	hash = Hash("lisa.bmp");
+	hash = Hash("Assets/lisa.bmp");
 	std::cout << "lisa.bmp Hash \t: " << hash << std::endl;
 	
 
@@ -46,31 +46,31 @@ int main()
 	std::cout << "-" << std::endl;
 
 	//should be no difference														Result = 0
-	difs = DifferenceBetweenTwoImages("julia.bmp", "julia.bmp");
+	difs = DifferenceBetweenTwoImages("Assets/julia.bmp", "Assets/julia.bmp");
 	std::cout << "Same image \t\t\t\t: " << difs << std::endl;
 
 	//should be no difference														Result = 0
-	difs = DifferenceBetweenTwoImages("julia.bmp", "juliaSmaller.bmp");
+	difs = DifferenceBetweenTwoImages("Assets/julia.bmp", "Assets/juliaSmaller.bmp");
 	std::cout << "Scaled down image \t\t\t: " << difs << std::endl;
 
 	//should be no difference														Result = 0
-	difs = DifferenceBetweenTwoImages("julia.bmp", "juliaLarger.bmp");
+	difs = DifferenceBetweenTwoImages("Assets/julia.bmp", "Assets/juliaLarger.bmp");
 	std::cout << "Scaled up image \t\t\t: " << difs << std::endl;
 
 	//should a small difference, if any												Result = 0
-	difs = DifferenceBetweenTwoImages("julia.bmp", "juliaHueChanged.bmp");
+	difs = DifferenceBetweenTwoImages("Assets/julia.bmp", "Assets/juliaHueChanged.bmp");
 	std::cout << "Hue changed on image \t\t\t: " << difs << std::endl;
 
 	//should be small difference, if any (Depending on degree of attack)			Result = 1
-	difs = DifferenceBetweenTwoImages("julia.bmp", "juliaBrightness.bmp");
+	difs = DifferenceBetweenTwoImages("Assets/julia.bmp", "Assets/juliaBrightness.bmp");
 	std::cout << "Brightness turned up on image, 62pts \t: " << difs << std::endl;
 
 	//should be smallDifference, less than 5										Result = 2
-	difs = DifferenceBetweenTwoImages("julia.bmp", "juliaCropped.bmp");
+	difs = DifferenceBetweenTwoImages("Assets/julia.bmp", "Assets/juliaCropped.bmp");
 	std::cout << "Image cropped slightly \t\t\t: " << difs << std::endl;
 
 	//Totally different images, number of differences should be 10+					Result = 17
-	difs = DifferenceBetweenTwoImages("julia.bmp", "lisa.bmp");
+	difs = DifferenceBetweenTwoImages("Assets/julia.bmp", "Assets/lisa.bmp");
 	std::cout << "Two completely different images \t: " << difs << std::endl;
 
 	std::cin.ignore();
