@@ -1,5 +1,4 @@
-Perceptual Image Hashing
-==============
+# Perceptual Image Hashing
 
 Some utility functions written to deal with the hashing of images, based on appearance.
 
